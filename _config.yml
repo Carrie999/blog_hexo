@@ -1,0 +1,4 @@
+deploy:
+  type: git
+  repo: git@github.com:Carrie999/Carrie999.github.io.git
+  branch: master
