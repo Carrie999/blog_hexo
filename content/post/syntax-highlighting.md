@@ -15,10 +15,10 @@ toc: false
 # reward: false
 # mathjax: false
 
-menu:
-  main:
-    parent: "docs"
-    weight: 4
+# menu:
+#   main:
+#     parent: "docs"
+#     weight: 4
 ---
 
 More detail: [Syntax Highlighting | Hugo](https://gohugo.io/content-management/syntax-highlighting/)
@@ -139,20 +139,50 @@ bah and humbug
 $
 ```
 
+```js
+function a(){
 
-## highlight shortcode
-
-example:
-
-```shortcode
-{{</* highlight go "linenos=table,hl_lines=8 15-17,linenostart=199" */>}}
-// ... code
-{{</* /highlight */>}}
+}
 ```
 
-result:
+## highlight shortcode
+example:
+{{< highlight go "linenos=table,hl_lines=1 0-100,linenostart=1" >}}
+// GetTitleFunc returns a func that can be used to transform a string to
+// title case.
+//
+// The supported styles are
+//
+// - "Go" (strings.Title)
+// - "AP" (see https://www.apstylebook.com/)
+// - "Chicago" (see http://www.chicagomanualofstyle.org/home.html)
+//
+func GetTitleFunc(style string) func(s string) string {
+  switch strings.ToLower(style) {
+  case "go":
+    return strings.Title
+  case "chicago":
+    tc := transform.NewTitleConverter(transform.ChicagoStyle)
+    return tc.Title
+  default:
+    tc := transform.NewTitleConverter(transform.APStyle)
+    return tc.Title
+  }
+}
+{{< /highlight >}}
 
-{{< highlight go "linenos=table,hl_lines=8 15-17,linenostart=199" >}}
+```js
+<section id="main">
+  <div>
+    <h1 id="title">{{ .Title }}</h1>
+    {{ range .Pages }}
+      {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+```
+result:
+{{<highlight go "linenos=table,hl_lines=0-100,linenostart=1" >}}
 // GetTitleFunc returns a func that can be used to transform a string to
 // title case.
 //
@@ -175,4 +205,5 @@ func GetTitleFunc(style string) func(s string) string {
     return tc.Title
   }
 }
-{{< /highlight >}}
+{{</highlight >}}
+

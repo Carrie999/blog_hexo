@@ -3,6 +3,7 @@
 # And see https://gohugo.io/getting-started/configuration/ .
 
 baseURL = "https://carrie999.github.io/"
+# baseURL = "localhost:1313/"
 title = "Jane - A super concise theme for Hugo"
 enableRobotsTXT = true
 enableEmoji = true
@@ -56,12 +57,8 @@ defaultContentLanguage = "zh-cn"           # Default language to use
   url = "/categories/"
 [[menu.main]]
   name = "github"
-  weight = 50
+  weight = 60
   url = "https://github.com/Carrie999"
-[deploy]
-  type = "git"
-  repo = "git@github.com:Carrie999/Carrie999.github.io.git"
-  branch = "master" #gh-pages
 
 [params]
   since = "2017"            # Site creation time          # 站点建立时间
@@ -70,7 +67,7 @@ defaultContentLanguage = "zh-cn"           # Default language to use
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "织雪纱奈的博客小屋"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["Hugo", "theme","jane"]
+  keywords = ["Hugo", "react","vue","js",'node.js',"javascript"]
   description = "Hugo theme jane example site."
 
   # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
@@ -78,8 +75,8 @@ defaultContentLanguage = "zh-cn"           # Default language to use
 
   # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
   # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.
-  toc = true                                                                            # 是否开启目录
-  photoswipe = true         # see https://github.com/dimsemenov/PhotoSwipe            # 是否启用PhotoSwipe（图片可点击）
+  toc = true                                                                        # 是否开启目录
+  photoswipe =  true               # see https://github.com/dimsemenov/PhotoSwipe            # 是否启用PhotoSwipe（图片可点击）
   contentCopyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
 
   # Link custom CSS and JS assets

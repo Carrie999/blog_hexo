@@ -9,8 +9,8 @@ author: ted
 
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
-# comment: false
-# toc: false
+# comment: true
+# toc: true
 autoCollapseToc: true
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: '<a href="https://github.com/gohugoio/hugoBasicExample" rel="noopener" target="_blank">See origin</a>'
